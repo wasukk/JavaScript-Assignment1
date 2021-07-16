@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 9-11</title>
+</head>
+<body>
+    <p>
+        1. Write a program to take “city” name as input from user.  <br>
+        If user enters “Karachi”, welcome the user like this: “Welcome to city of lights”
+    </p>
+    <button onclick="question1()">  Karachi </button>
+    <p id="cityOfLight"></p>
+
+    <p>
+        2. Write a program to take “gender” as input from user. <br>
+           If the user is male, give the message: Good Morning Sir. <br>
+           If the user is female, give the message: Good Morning Ma’am.
+    </p>
+
+    <button onclick="question2()">Show message</button>
+    <p id="showmsg"></p>
+
+    <p>
+        3. Write a program to take input color of road traffic signal from the user & show the message according to this table: <br>
+        Red     : Must Stop <br>
+        Yellow  : Ready to Move <br>
+        Greeen  : Move Now
+    </p>
+    <button onclick="showSignal()"> Show Signal Message</button>
+    <p id="showSignal"></p>
+
+    <p>
+        4. Write a program to take input remaining fuel in car (in litres) from user. If the current fuel is less than 0.25litres,  <br>
+           show the message “Please refill the fuel in your car” 
+
+    </p>
+        <button  onclick="question4()"> Car Fuel Status </button>
+    <p id="fuel"></p>   
+    
+    <button onclick="question5()"> Question5 </button>
+    <p id="Question5"></p>
+
+    <p>
+        6. Write a program to take input the marks obtained in three subjects & total marks. <br>
+           Compute & show the resulting percentage on your page. <br>
+           Take percentage & compute grade as per following table: <br>
+           <ul>
+               <li>Greater than or equal to 80 ===  A1 Grade === Excellent </li>
+               <li>Greater than or equal to 70 ===  A Grade  === Good </li>
+               <li>Greater than or equal to 60 ===  B Grade  === You need to improve </li>
+               <li>Less than 60 ===  Fail  === Sorry </li>
+           </ul>
+
+           <button onclick="question6()"> Marksheet </button>
+    </p>
+    <p>
+        7. Guess game:
+           Store a secret number (ranging from 1 to 10) in a variable. <br>
+           Prompt user to guess the secret number. a. If user guesses the same number, <br>
+           show “Bingo! Correct answer”. b. If the guessed number +1 is the secret number, <br>
+           show “Close enough to the correct answer”. 
+    </p>
+    <button onclick="question7()"> Guess number </button>
+    <p id="quest7"></p>
+
+    <p>
+        8. Write a program to check whether the given number is divisible by 3. <br>
+           Show the message to the user if the number is divisible by 3. 
+    </p>
+    <button onclick="question8()">Check</button>
+    <p id="quest8"></p>
+    <p>
+        9. Write a program that checks whether the given input is an even number or an odd number.
+    </p>
+    <button onclick="question9()"> EVEN/ODD </button>
+    <p id="quest9"> </p>
+
+    <p>
+        10. Write a program that takes temperature as input and shows a message based on following criteria <br>
+             a. T > 40 then “It is too hot outside.”  <br>
+             b. T > 30 then “The Weather today is Normal.” <br>
+             c. T > 20 then “Today’s Weather is cool.” <br>
+             d. T > 10 then “OMG! Today’s weather is so Cool.”
+      
+    </p>
+    <button onclick="question10()"> Temperature </button>
+    <p id="quest10"></p>
+
+    <p>
+        11. Write a program to create a calculator for +,-,*, / & % using if statements. Take the following input: <br>
+            a. First number <br>
+            b. Second number <br>
+            c. Operation (+, -, *, /, %) <br>
+            Compute & show the calculated result to user.
+    </p>
+
+    <button onclick="question11()"> Calculator </button>
+    <p id="quest11"></p>
+
+    <br>
+    <a href="index.html"><button> Home</button></a>
+</body>
+<script>
+    function question1(){
+        var cityName = prompt("Enter City Name: " );
+        if(cityName === "Karachi" || cityName==="KARACHI" || cityName === "karachi"){
+            document.getElementById("cityOfLight").innerHTML = cityName + " the city of Light";
+        }
+        else{
+            document.getElementById("cityOfLight").innerHTML = "You have enter wrong city name";
+        }
+    }
+    function question2(){
+        var gender = prompt("Enter your gender: ");
+        if(gender==="male"|| gender==="MALE" || gender === "Male"){
+            document.getElementById("showmsg").innerHTML = "Good Morning Sir";
+        }
+        else if(gender==="female" || gender==="FEMALE" || gender === "Female"){
+            document.getElementById("showmsg").innerHTML = "Good Morning Ma'am";
+        }
+        else{
+            document.getElementById("showmsg").innerHTML = "Sorry!" + gender + " is not Gender";
+        }
+    }
+    function  showSignal(){
+        var signal = prompt("Enter Color of Signal: ");
+        if(signal === "Red" || signal==="RED" || signal==="red"){
+            document.getElementById("showSignal").innerHTML = signal + " MUST STOP ";
+            }
+        else if(signal === "Yellow" || signal==="yellow" || signal === " YELLOW"){
+            document.getElementById("showSignal").innerHTML = signal + " READY TO MOVE ";
+        }
+        else if(signal === "Green" || signal==="GREEN" || signal === "green"){
+            document.getElementById("showSignal").innerHTML = signal + " Move Now";
+        }
+    }
+    function question4(){
+        var fuel = prompt("Enter Fuel Status: ");
+        var limit = 2.5;
+
+        if(fuel < 2.5 ){
+            document.getElementById("fuel").innerHTML = fuel + " Litter fuel, Please refill the fuel in your car";
+        }
+        else{
+            document.getElementById("fuel").innerHTML = fuel + " Litters fuel, You have enough fuel Sir.";
+        }
+    }   
+    function question5(){
+    //     // var a = 4; if (++a === 5){ alert("given condition for variable a is true"); }
+    //     // var b = 82; if (b++ === 83){ alert("given condition for variable b is true"); }
+    //     var c = 12; 
+    //     if (c++ === 13){ 
+    //         alert("condition 1 is true");
+    //     }
+    //     if (c === 13){ 
+    //         alert("condition 2 is true");
+    //     }
+    //     if (++c < 14){
+    //         alert("condition 3 is true"); 
+    //     } 
+    //     if(c === 14){ 
+    //         alert("condition 4 is true"); 
+    //     }
+    // var materialCost = 20000;
+    // var laborCost = 2000;
+    // var totalCost = materialCost + laborCost; 
+    // if (totalCost === laborCost + materialCost){
+    //     alert("The cost equals"); 
+    // }
+    // if (true){ alert("True"); } if (false){ alert("False"); }
+
+}
+function question6(){
+
+        var totalMarks = 300;
+        var obtainMarks = [];
+        var sumOfObtaiMarks = 0;
+     
+        for(var i=0;i<=2; i++){
+           var  marks = +prompt();
+            obtainMarks.push(marks)
+            sumOfObtaiMarks =sumOfObtaiMarks + marks;
+        }
+        var percentage = Math.round((sumOfObtaiMarks/totalMarks)*100);
+        
+        // for(var i=0;i<=2;i++){
+        //     document.write(obtainMarks[i]+"<br>");
+        //     }
+            document.write("Total Marks"+ totalMarks +"<br>");
+            document.write("Sum of obtain Marks :"+ sumOfObtaiMarks+"<br>");
+            document.write("Percentage :" + percentage +"%" +"<br>");
+            if( percentage >= 80){
+                document.write("Grade :"+ " A1 " +"<br>");
+                document.write("Remarks "+" Excelent"+"<br>");
+            }
+            else if(percentage >=70){
+                document.write("Grade :"+ "A" +"<br>" );
+                document.write("Remarks "+" Good"+"<br>");
+            }
+           else if(percentage >= 60){
+                document.write("Grade :"+ "B"+"<br>" );
+                document.write("Remarks "+" You need to improve"+"<br>");
+           }
+           else{
+               document.write("Grade :" + "Fail"+"<br>");
+               document.write("Remarks "+ "Sorry" + "<br>");
+
+           }
+    }
+    function question7(){
+        var guess = +prompt("Eneter any number range from 1-10 :" );
+        var num = 7; 
+        if(guess == num){
+            document.getElementById("quest7").innerHTML = "Bingo! Correct answer";
+            // document.write("Hello")
+        }
+        else if(guess == ++num){
+            document.getElementById("quest7").innerHTML = "Close enough to the correct answer";
+            // document.write("Close enough")
+        }
+        else{
+            document.getElementById("quest7").innerHTML = "Sorry, Try again";
+            // document.write("Sorry Try again")
+        }
+    }
+    function question8(){
+        var num = +prompt("Enter Number:");
+        if(num%3==0){
+            document.getElementById("quest8").innerHTML = num +" divisable by 3";
+        }
+        else{
+            document.getElementById("quest8").innerHTML = num +" can't divisable by 3";
+        }
+    }
+    function question9(){
+        var num = +prompt("Enter Number");
+        if(num%2===0){
+            document.getElementById("quest9").innerHTML = num +" Given number is Even";
+        }
+        else{
+            document.getElementById("quest9").innerHTML = num +" Given number is Odd";
+        }
+    }
+    function question10(){
+        var temperature = +prompt("Enter temperature : ");
+        if(temperature >= 40){
+            document.getElementById("quest10").innerHTML = temperature + " C<sup>o</sup> "+" It is too hot outside ";
+        }
+        else if(temperature >= 30){
+            document.getElementById("quest10").innerHTML = temperature + " C<sup>o</sup>" +" The Weather today is Normal ";
+        }
+        else if(temperature >= 20){
+            document.getElementById("quest10").innerHTML = temperature + " C<sup>o</sup> " + " Today’s Weather is cool ";
+        }
+        else if(temperature < 20){
+            document.getElementById("quest10").innerHTML = temperature+ " C<sup>o</sup>" +" OMG! Today’s weather is so Cool";
+        }
+    }
+    function question11(){
+        var num1 = +prompt("Enter First Value : ");
+        var opr = prompt("Enter Operator ");
+        var num2 = +prompt("Enter Second Value: ");
+        
+        if(opr === "+"){
+            var result = num1 + num2;
+            document.getElementById("quest11").innerHTML = result;
+        }
+        else if(opr === "-"){
+            var result = num1 - num2;
+            document.getElementById("quest11").innerHTML = result;
+        }
+        else if(opr === "*"){
+            var result = num1 * num2;
+            document.getElementById("quest11").innerHTML = result;
+        }
+        else if(opr === "/"){
+            var result = num1 / num2;
+            document.getElementById("quest11").innerHTML = result;
+        }
+        else if(opr === "%"){
+            var result = num1 % num2;
+            document.getElementById("quest11").innerHTML = result;
+        }
+    }
+</script>
+</html>

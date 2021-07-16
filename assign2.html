@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2</title>
+</head>
+
+<body>
+    <div>
+        <p>1. Declare a variable called username.</p>
+        <button onclick="myFunction()"> Press Me to Get User Name</button>
+        <p>2. Declare a variable called myName & assign to it a string that represents your Full Name.</p>
+        <button onclick="myFunction2()"> Press me to know the value of myName variable</button>
+        <p>
+            3. Write script to
+        <ol>
+            <li> Declare a JS variable, titled message.</li>
+            <li> Assign “Hello World” to variable message</li>
+            <li> Display the message in alert box.</li>
+        </ol>
+        </p>
+        <button onclick="question3()">Hello World!</button>
+        <p>
+            4. Write a script to save student’s bio data in JS variables and show the data in alert boxes. <br>
+            "NAME: "
+            "AGE: "
+            "CERTIFICATION: "
+        </p>
+        <button onclick="bioData()">BIO DATA</button>
+        <!-- <p>
+            5. Write a script to display the following alert using one JS variable: <br>
+            "PIZZA" <br>
+            "PIZZ" <br>
+            "PIZ" <br>
+            "PI" <br>
+            "P" <br>
+
+        </p>
+        <button onclick="pizzaFunction()" > PIZZA</button> -->
+
+
+
+
+
+        <p>
+            6. Declare a variable called email and assign to it a string that represents your Email Address(e.g.
+            example@example.com). <br> Show the blow mentioned message in an alert box.(Hint: use string concatenation)
+            <br>
+            "My Email Address is : waseem.sharifkk@gmail.com"
+        </p>
+        <button onclick="showEmail()"> Show Email</button>
+
+
+        <p>
+            7. Declare a variable called book & give it the value “A smarter way to learn JavaScript”. <br> Display the
+            following message in an alert box:
+            "I am trying to learn JS from the book A smarter way to learn JavaScript"
+        </p>
+        <button onclick="learnJS()">BOOK </button>
+
+        <p>
+            8. Write a script to display this in browser through JS
+            "Yah! i can Write HTML content through JavaScript."
+        </p>
+        <button ondblclick="myfunction6()"> Generate content </button>
+        <p>
+            9. Store following string in a variable and show in alert and browser through JS <br>
+            “▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬”
+        </p>
+        <button onclick="myfunction7()"> Generate Line</button>
+    </div>
+    <br>
+    <a href="index.html"><button> Home</button></a>
+
+    <script>
+        function myFunction() {
+            var username = "Ali"
+            alert("User Name: " + " " + username);
+        }
+        function myFunction2() {
+            var myName = "Muhammad Waseem";
+            var myRollNumber = "WM-1027"
+            alert("My name is : " + myName + "\n" + "My Roll Number is : " + myRollNumber);
+
+        }
+        function question3() {
+            var message = "Hello World!"
+            alert("Message: " + message);
+        }
+        function bioData() {
+            var studentName = "Ali";
+            var studentAge = "18";
+            var studentCertificate = "Web & Mobile App Development";
+            alert("Student Name: " + studentName);
+            alert("Student Age: " + studentAge);
+            alert("Student Certification: " + studentCertificate);
+
+        }
+        function showEmail() {
+            var email = "waseem.sharifkk@gmail.com";
+            alert("My email address is : " + email);
+
+
+        }
+        function learnJS() {
+
+            var book = "A smarter way to learn JavaScript";
+            alert("i am trying to learn JS from the book " + book);
+
+        }
+        function myfunction6() {
+
+            document.write(" <i> Yah! </i> i can Write HTML content through JavaScript.");
+
+        }
+        function myfunction7() {
+
+            var line = "▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬"
+            alert(line);
+        }
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Chapter 3</title>
+</head>
+
+<body>
+    <div>
+        <p>
+            1. Declare a variable called age & assign to it your age. Show your age in an alert box. <br>
+            "I am 20 years old"
+        </p>
+        <button onclick="showAge()"> Show Age</button>
+
+        <p>
+            3. Declare a variable called birthYear & assign to it your birth year. Show the following message in your browser:
+                "My birth year is 1990" <br>
+                "Data Type of my declared variable is Number"
+        </p>
+
+     
+
+        <button onclick="birthYear()">  Birth Year </button>
+        
+        <p id="showYear"></p> 
+
+        <p>
+            4. A visitor visits an online clothing store www.xyzClothing.com . <br> 
+            Write a script to store in variables the following information: <br>
+            a. Visitor’s name <br> b. Product title <br> c. Quantity i.e. how many products a visitor wants to order <br>
+            Show the following message in your browser: <br>
+            “John Doe ordered 5 T-shirt(s) on XYZ Clothing store”.
+        </p>
+
+        <button onclick="clothStore()">Show Customer Data</button>
+            <p id="orderDetails"></p>    
+        
+        
+    </div>
+    <br>
+    <a href="index.html"><button> Home</button></a>
+
+    <script>
+        function showAge() {
+            var age = prompt("Enter your age");
+            alert("I am " + age + " years old");
+        }
+        function birthYear(){
+            var year=1990;
+            document.getElementById("showYear").innerHTML="My birth year is "+ year +  "<br/>" +"Data Type of my declared variable is Number";
+        }
+        function clothStore(){
+            var name= prompt("Please Enter Your Name: ");
+            var productTittle= prompt("Product Tittle: ");
+            var productQty= prompt("How Many Products You Want: ");
+            document.getElementById("orderDetails").innerHTML = name + " ordered "+ productQty + "  "+ productTittle + " on XYZ Clothing store";
+
+            // alert(name + " ordered "+ productQty + "  "+ productTittle + " on XYZ Clothing store");
+        }
+       
+        // console.log("Cookies: " + navigator.cookieEnabled);
+        // console.log("Browser Language: " + navigator.browserLanguage);
+        // console.log("Language: " + navigator.language);
+        // console.log("Platform: " + navigator.platform);
+        // console.log("Connection Speed: " + navigator.connectionSpeed);
+        // console.log("User Agent: " + navigator.userAgent);
+        // console.log("Webdriver: " + navigator.webdriver);
+        // console.log("Geolocation: " + navigator.geolocation);
+
+    </script>
+</body>
+
+</html>

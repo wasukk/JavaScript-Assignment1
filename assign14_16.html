@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatper 14-16</title>
+</head>
+<body>
+   <p>
+    3. Declare and initialize a strings array. <br>
+        
+    <p>Ans var stringArray = ['Hello', 'Asalam O Alkeum']</p>
+        
+    4. Declare and initialize a numbers array.
+    <p>Ans var numberArray = [1,2,3,4,5]</p>
+
+    5. Declare and initialize a boolean array.
+    <p>Ans var booleanArray = [true, false]</p>
+
+    6. Declare and initialize a mixed array.
+    <p>Ans var mixedArray = ['Hello', false, 25,100]</p>
+    </p> 
+    <p>
+        7. Declare and Initialize an array and store available education qualifications in Pakistan  <br> 
+        (e.g. SSC, HSC, BCS, BS, BCOM, MS, M. Phil., PhD). <br>
+           Show the listed qualifications.
+    </p>
+    <button onclick="question7()"> Show qualifications </button>
+    <p id="quest7"></p>
+
+    <p>
+        8. Write a program to store 3 student names in an array. <br>
+           Take another array to store score of these three students. Assume that total marks are 500 for each student, <br> 
+           display the scores & percentages of students
+    </p>
+
+    <button  onclick="question8()">Show Students Record</button>
+
+    <p>
+        9. Initialize an array with color names. Display the array elements in your browser.  <br>
+            a. Ask the user what color he/she wants to add to the beginning & add that color to the beginning of the array. <br>
+               Display the updated array in your browser. <br>
+               
+            b. Ask the user what color he/she wants to add to the end & add that color to the end of the array. <br>
+               Display the updated array in your browser. <br>
+            
+            c. Add two more color to the beginning of the array. Display the updated array in your browser. <br>
+            
+            d. Delete the first color in the array. Display the updated array in your browser. <br>
+            
+            e. Delete the last color in the array. Display the updated array in your browser.  <br>
+            
+            f. Ask the user at which index he/she wants to add a color & color name. Then add the color to desired position/index.  <br>
+               Display the updated array in your browser. <br>
+            
+            g. Ask the user at which index he/she wants to delete color(s) & <br>
+               how many colors he/she wants to delete. Then remove the same number of color(s) from user-defined position/index. . <br>
+               Display the updated array in your browser. <br>
+         
+    </p>
+    <button onclick="question9()"> Show Update </button> 
+
+    <p>
+        10. Write a program to store student scores in an array & sort the array in ascending order using Array’s sort method.
+    </p>
+        <button onclick="question10()"> Sort Array </button>
+    <p>
+        11. Write a program to initialize an array with city names. Copy 3 array elements from cities array to selectedCities array.
+    </p>
+        <button onclick="question11()"> Cities </button>
+
+    <p>
+        12. Write a program to create a single string from the below mentioned array: <br>
+            var arr = [“This ”, “ is ”, “ my ”, “ cat”]; (Use array’s join method)
+    </p>    
+        <button onclick="question12()"> Show Array </button>
+    <p>
+        13. Create a new array. Store values one by one in such a way that you can access the values in the order in which they were stored. <br>
+            (FIFO-First In First Out)
+    </p>
+        <button onclick="question13()"> FIFO </button>
+        <button onclick="question14()"> LIFO </button>
+</body>
+<script>
+    function question7(){
+        var qualifications = ['SSC', 'HSC','BCS','BS','BCOM', 'MS', 'M.Phil','PhD'];
+                document.write("<b>  Qualification: </b> <br>");
+            for(var j=0 ; j<qualifications.length ;j++){
+                document.write(j+1+ ")  "+ qualifications[j]+"<br>");
+            }
+    }
+    function question8(){
+        var studentsNames = [];
+            for(var i=0; i<=2; i++){
+             var names =prompt("Please Eneter Student Name " +(i+1));
+                 studentsNames.push(names);
+            }
+        var studentsScores = [];
+            for(var i=0; i<=2; i++){
+             var numbers =prompt("Please Eneter Student Numbers " +(i+1));
+                 studentsScores.push(numbers);
+            }
+        var totalMarks =    500;
+        document.write(
+            "Score of "
+            +studentsNames[0]
+            +" is " 
+            + studentsScores[0] 
+            +" and Percentage: "
+            + (studentsScores[0]/totalMarks)*100
+            +" %"
+            +"<br>"
+            );
+        document.write(
+            "Score of "
+            +studentsNames[1]
+            +" is " 
+            + studentsScores[1] 
+            +" and Percentage: "
+            + (studentsScores[1]/totalMarks)*100
+            +" %" 
+            +"<br>"
+            );
+        document.write(
+            "Score of "
+            +studentsNames[2]
+            +" is " 
+            + studentsScores[2] 
+            +" and Percentage: "
+            + (studentsScores[2]/totalMarks)*100
+            +" %" 
+            +"<br>"
+            );        
+
+    }
+    function question9(){
+
+        
+        var colors = [" RED ", " GREEN ", " YELLOW "];
+        document.write(" Array elements. <br>");
+        for(var i=0; i<colors.length; i++){
+            document.write("INDEX: "+i+"--" +colors[i] + "<br>"); 
+        }
+        var newColor = prompt("What colour you want to add at the beginning of the Array: ");
+        colors.unshift(newColor);
+        document.write("<hr>")
+        document.write( " Q9-A "+ "<br>"+ newColor + " Color added to the beginning of the array <br>");
+        for(var i=0; i<colors.length; i++){
+            document.write("INDEX: "+i+"--" + colors[i] + "<br>"); 
+        }
+        
+        var newColor = prompt("what color you wants to add to the end of the Array: ");
+        colors.push(newColor);
+        document.write("<hr>")
+        document.write( " Q9-B : "+ "<br>"+ newColor + " Color added to the end of the array <br>");
+        for(var i=0; i<colors.length; i++){
+            document.write("INDEX: "+i+"--" + colors[i]+ "<br>")
+        }
+       
+        var newColor1 = prompt("Enter first color name :");
+        var newColor2 = prompt("Enter second color name: ");
+            colors.unshift(newColor2);
+            colors.unshift(newColor1);
+                document.write("<hr>")
+        document.write( " Q9-C : "+ "<br>"+ newColor1 + " & " + newColor2 + " Two more colors added to the beginning of the Array  <br>");
+        for(var i=0; i<colors.length; i++){
+            document.write("INDEX: "+i+"--" + colors[i]+ "<br>")
+        } 
+        colors.shift();
+        document.write("<hr>")
+        document.write( " Q9-D : "+ "<br>"+ " First color deleted <br>");
+        for(var i=0; i<colors.length; i++){
+            document.write( "INDEX: "+i+"--" +colors[i]+ "<br>")
+        }
+        colors.pop();
+        document.write("<hr>")
+        document.write( " Q9-E : "+ "<br>"+ " last color deleted <br>");
+        for(var i=0; i<colors.length; i++){
+            document.write("INDEX: "+i+"--" +colors[i]+ "<br>")
+        }
+         var position = prompt(" Please Enter index where you want to add new color ");
+         var newColor = prompt(" Enter new color name " );
+            colors.splice(position, position, newColor);
+        document.write("<hr>")
+        document.write( " Q9-F : "+ "<br>"+ " New Colour added to the given "+ position + " index <br>");
+        for(var i=0; i<colors.length; i++){
+            document.write("INDEX: "+i+"--" +colors[i]+ "<br>")
+        }
+        var  position = +prompt(" Please Enter index from where you want to delete color(s) ");
+        var deleteColor = +prompt(" How many colors you want to delete " );
+            colors.splice(position, deleteColor);
+        document.write("<hr>")
+        document.write( " Q9-G : "+ "<br>"+ deleteColor + " Colours deleted from given " + position + " index <br>");
+        for(var i=0; i<colors.length; i++){
+            document.write("INDEX: "+i+"--" +colors[i]+ "<br>")
+        }
+    }
+    function question10(){
+        var studentsMarks = [];
+        for(var i=0; i<=2; i++){
+            var marks = prompt("Enter Marks ");
+            studentsMarks.push(marks);
+        }
+        document.write("Score of Students : <br>");
+        for(var i=0; i<studentsMarks.length; i++){
+            document.write(studentsMarks[i]+ ", ");
+        }
+        numberSort = function (a,b) {
+            return a - b;
+        };
+
+        // studentsMarks.sort();
+        studentsMarks.sort(numberSort);
+        document.write("<br> Ordered Score of Students :"+"<br>" + studentsMarks );
+    }
+    function question11(){
+        var cityList = ["Karachi", "Lahore", "Islamabad", "Quetta", "Peshawar" ]
+        var selectedCitiesList = cityList.slice(2,4);
+        document.write("City List: <br>")
+        for(var i=0; i<cityList.length; i++){
+            document.write(cityList[i]+", " );
+        }
+        document.write("<br> Selected Cities List <br>")
+        for(var i=0; i<selectedCitiesList.length; i++){
+            document.write(selectedCitiesList[i]+", ");
+        }
+    }
+    function  question12(){
+        var arr = ["This","is","my","cat"];
+        document.write(arr.join());
+    }
+    function question13(){
+        var fifo = [];
+        for(var i=0; i<=2; i++){
+            var parts = prompt("Eneter Computer Parts Name: ");
+            fifo.push(parts);
+        }
+        for(var i=0; i<fifo.length; i++){
+            document.write("Index : "+i+" "+fifo[i]+"<br>");
+        }
+    }
+    function question14(){
+        var lifo = [];
+        for(var i=0; i<=2; i++){
+            var parts = prompt("Eneter Computer Parts Name: ");
+            lifo.push(parts);
+        }
+        for(var i=2; i>=0; i--){
+            document.write("Index :" + i+ " "+lifo[i]+"<br>");
+        }
+    }
+
+</script>
+</html>

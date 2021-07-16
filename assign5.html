@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 5</title>
+</head>
+<body>
+    <div>
+    <p>
+        1. Write a program that take two numbers & add them in a new variable. <br>
+        Show the result in your browser.
+        "Sum of 3 and 5 is 8"
+        <br>
+        2. Repeat task1 for subtraction, multiplication, division & modulus.
+    </p>
+    <button onclick="numberSum()">Sum</button>
+    <button onclick="numberSub()">Subtraction</button>
+    <button onclick="numberMulti()">Multiplication</button>
+    <button onclick="numberDiv()">Division</button>
+    <button onclick="numberMod()">Modulus</button>
+    <p id="showResult"></p>
+
+    <p>
+        3. Do the following using JS Mathematic Expressions <br>
+        a. Declare a variable. <br>
+        b. Show the value of variable in your browser like “Value after variable declaration is: ??”. <br>
+        c. Initialize the variable with some number. <br>
+        d. Show the value of variable in your browser like “Initial value: 5”. <br>
+        e. Increment the variable. <br>
+        f. Show the value of variable in your browser like “Value after increment is: 6”. <br>
+        g. Add 7 to the variable. h. Show the value of variable in your browser like “Value after addition is: 13”. <br>
+        i. Decrement the variable. <br>
+        j. Show the value of variable in your browser like “Value after decrement is: 12”. <br>
+        k. Show the remainder after dividing the variable’s value by 3. <br>
+        l. Output : “The remainder is : 0”.
+         <br>
+    </p>
+
+    <button onclick="myFunction()"> Show the Value of Number </button>   
+    <p id="value"></p> 
+    <p id="value1"></p> 
+    <p id="value2"></p> 
+    <p id="value3"></p>
+    <p id="value4"></p> 
+    <p id="value5"></p> 
+    <p id="value6"></p>     
+
+    <p>4. Cost of one movie ticket is 600 PKR. Write a script to store ticket price in a variable <br> and calculate the cost of buying 5 tickets</p>
+    <button  onclick="calculateTicket()">Calculate Tickets Price</button>
+    <p id="ticketsPrice"></p>
+
+    <p>5. Write a script to display multiplication table of any number in your browser.</p>
+    <button onclick="table()">Generate Table</button>
+    <br>
+    <p id="tableResult"></p>
+
+    <p>6. The Temperature Converter: It’s hot out! Let’s make a converter based on the steps here.<br>
+        a. Store a Celsius temperature into a variable. <br>
+        b. Convert it to Fahrenheit & output “NNoC is NNoF”. <br>
+        c. Now store a Fahrenheit temperature into a variable.<br>
+        d. Convert it to Celsius & output “NNoF is NNoC”.</p><br>
+
+        <button onclick="tempCalculate()">Calculate The Temperature</button>
+        <p id="showF"></p>
+        <p id="showC"></p>
+
+
+        <p>7. Write a program to implement checkout process of a shopping cart system for an e-commerce website. <br>
+              Store the following in variables
+               <br>
+              a. Price of item 1 <br>
+              b. Price of item 2 <br>
+              c. Ordered quantity of item 1 <br>
+              d. Ordered Quantity of item 2 <br>
+              e. Shipping charges <br>
+            </p>
+              <button onclick="cartBill()"> Generate Bill</button>
+              
+           <p>8. Store total marks & marks obtained by a student in 2 variables. <br>
+                 Compute the percentage & show the result in your browser</p>
+                 
+            <button onclick="percentage()">Calculate Percentage</button>        
+            
+            <p>9. Assume we have 10 US dollars & 25 Saudi Riyals. Write a script to convert the total currency to Pakistani Rupees. <br>
+                  Perform all calculations in a single expression. <br>
+                  (Exchange rates : 1 US Dollar = 104.80 Pakistani Rupee and 1 Saudi Riyal = 28 Pakistani Rupee)</p>
+
+                  <button onclick="exchageCurrency()"> Convert To PKR </button>
+                  <p id="showHeading"></p>
+                  <p id="showPKR"></p>
+
+     <p>10. Write a program to initialize a variable with some number and do arithmetic in following sequence: <br>
+                    a. Add 5 <br>
+                    b. Multiply by 10 <br>
+                    c. Divide the result by 2 Perform all calculations in a single expression</p>     
+
+                    <button onclick="question10()"> Show Result</button>
+
+                    <p id="showAnswer"></p>
+
+
+     <p>11. The Age Calculator: Forgot how old someone is? Calculate it! <br>
+                a. Store the current year in a variable. <br>
+                b. Store their birth year in a variable. <br>
+                c. Calculate their 2 possible ages based on the stored values.</p>
+                <button onclick="calculateAge()">Calculate Age</button>
+   <p>12. The Geometrizer: Calculate properties of a circle.  <br>
+       a. Store a radius into a variable. <br>
+       b. Calculate the circumference based on the radius, and output “The circumference is NN”. <br> 
+        (Hint : Circumference of a circle = 2 π r , π = 3.142) <br>
+       c. Calculate the area based on the radius, and output “The area is NN”. <br>
+        (Hint : Area of a circle = π r2, π = 3.142) </p>
+     <button onclick="question12()" >Calculate Circumference and Area</button>
+
+
+
+    </div>
+    <br>
+    <a href="index.html"><button> Home</button></a>
+    
+
+    <script>
+        function numberSum(){
+            var num1 = parseInt( prompt("Enter First Value: "));
+            var num2 = parseInt( prompt("Enter Second Value: "));
+            var result = num1 + num2;
+            document.getElementById("showResult").innerHTML= "Sum of " + num1 + " and " + num2 +" is " + result;
+        }
+        function numberSub(){
+            var num1 = parseInt( prompt("Enter First Value: "));
+            var num2 = parseInt( prompt("Enter Second Value: "));
+            var result = num1 - num2;
+            document.getElementById("showResult").innerHTML= "Subtraction of " + num1 + " and " + num2 +" is " + result;
+        }
+        function numberMulti(){
+            var num1 = parseInt( prompt("Enter First Value: "));
+            var num2 = parseInt( prompt("Enter Second Value: "));
+            var result = num1 * num2;
+            document.getElementById("showResult").innerHTML= "Multiplication of " + num1 + " and " + num2 +" is " + result;
+        }
+        function numberDiv(){
+            var num1 = parseInt( prompt("Enter First Value: "));
+            var num2 = parseInt( prompt("Enter Second Value: "));
+            var result = num1 / num2;
+            document.getElementById("showResult").innerHTML= "Division of " + num1 + " and " + num2 +" is " + result;
+        }
+        function numberMod(){
+            var num1 = parseInt( prompt("Enter First Value: "));
+            var num2 = parseInt( prompt("Enter Second Value: "));
+            var result = num1 % num2;
+            document.getElementById("showResult").innerHTML= "Modulus of " + num1 + " and " + num2 +" is " + result;
+        }
+        function myFunction(){
+
+            var num = parseInt(prompt("Enter Number: "));
+            var exampleValue= num+7;
+            var modulusValue = exampleValue%exampleValue;
+            var exampleValue2 = num/3;
+            document.getElementById("value").innerHTML = "The Value of Number is: "+ num;
+            document.getElementById("value2").innerHTML = "The Value after increment: "+ ++num;
+            document.getElementById("value3").innerHTML = "The Value of Number after adding 7: "+  exampleValue;
+            document.getElementById("value4").innerHTML = "The Value after Decrement: "+ --exampleValue;
+            document.getElementById("value5").innerHTML = "The Value of Number after dividing 3: "+  exampleValue2;
+            document.getElementById("value6").innerHTML = "The Value after Decrement: "+ modulusValue;
+        }
+        function calculateTicket(){
+            var ticketPrice = 600;
+            var numberOfTickets =5;
+            var totalPrice = ticketPrice*numberOfTickets;
+            document.getElementById("ticketsPrice").innerHTML = "Total cost to buy "+numberOfTickets+ " tickets to a movie is " + totalPrice +"PKR" ;  
+        }
+        function table(){
+            var num = +prompt("Eneter Number for Table");
+            document.write("Table of "+ num +"<br>")
+            for(var i=1; i<=10; i++){
+                document.write("<br>"+num + " x "+ i + " = " + i * num+ "<br>");
+            }
+        }
+        function tempCalculate(){
+            var celsiusValue = +prompt("Enter Temprature in Celsius: ");
+            var fahrenheitValue = +prompt("Enter Temprature in Fahrenheit: ")
+            var Celsius  = (fahrenheitValue-32)*5/9;
+            var Fahrenheit = (celsiusValue*9/5)+32;
+            document.getElementById("showF").innerHTML = celsiusValue+"<sup>o</sup> C" + " is " + Fahrenheit + "<sup>o</sup> F"; 
+            document.getElementById("showC").innerHTML = fahrenheitValue+"<sup>o</sup> F" + " is " + Celsius + "<sup>o</sup> C"; 
+        }
+
+        function cartBill(){
+            var itemOnePrice = +prompt("Enter Price of Item 1");
+            var itemOneQty = +prompt("Enter Qty of Item 1");
+            var itemTwoPrice = +prompt("Enter Price of Item 2");
+            var itemTwoQty = +prompt("Enter Qty of Item 2");
+            var shipingCharges = +prompt("Shipping Charges: ");
+            var itemOneCost = itemOnePrice*itemOneQty;
+            var itemTwoCost = itemTwoPrice*itemTwoQty;
+            var totalCost = itemOneCost + itemTwoCost + shipingCharges;
+            
+            // document.write("items 1 cost "+ itemOneCost);
+            // document.write("item 2 cost:"+ itemTwoCost);
+            document.write("<h1>Shopping Cart</h1> <br>");
+            document.write("Price of Item 1 is :" + itemOnePrice+"<br>");
+            document.write("Qty of Item 1 is :"+ itemOneQty+"<br>");
+            document.write("Price of Item 2 is :" + itemTwoPrice+"<br>");
+            document.write("Qty of Item 2 is :"+ itemTwoQty+"<br>");
+            document.write("Shipping Charges: "+ shipingCharges+"<br>");
+            document.write("Total Cost of your order is: " + totalCost);
+        }
+        function percentage() {
+            var totalMarks = +prompt("Enter total Marks: ");
+            var obtainMarks = +prompt("Enter obtain Marks: ");
+            var percentage = (obtainMarks/totalMarks )* 100 
+            document.write("<h1>Mark Sheet</h1>")
+            document.write ("Total Marks: " + totalMarks +"<br>");
+            document.write ( "Obtain Marks: " + obtainMarks+"<br>");
+            document.write ( "Obtain Marks: " + percentage+"<br>");
+        }
+        function exchageCurrency(){
+            var usd = 104.80;
+            var riyal = 28;
+            var totalRupees = (10*usd)+(25*riyal);
+            document.getElementById("showHeading").innerHTML = "<h1>Currency in PKR</h1>";
+            document.getElementById("showPKR").innerHTML = "Total Currency in PKR : " + totalRupees;
+        
+        }
+        function question10(){
+
+            var num = +prompt("Enter Value :" );
+            var a = 5;
+            var b = 10;
+            var c = 2;
+            var result = (num+5)*10/2;
+            document.getElementById("showAnswer").innerHTML= result;
+        }
+        function calculateAge(){
+            var curentYear = 2021;
+            var birthYear = +prompt("Enter your Birth year ");
+            var age = curentYear-birthYear;
+            document.write("<h1>Age Calculator</h1>")
+           document.write("Curent Year: " + curentYear + "<br>");
+           document.write("Birth Year: "+ birthYear+ "<br>");
+           document.write( "Your Age is: "+ age+ "<br>");
+        }
+        function question12(){
+
+            var radius = +prompt("Enter Radius: ");
+            var pi = 3.14;
+            var circumference =  2*pi*radius;
+            var area = (radius*radius)*pi;
+            document.write("Radius of circle: "+ radius);
+            document.write("The Circumference is: "+circumference+"<br>");
+            document.write("The are is : "+area);
+
+
+
+        }
+
+    </script>
+</body>
+</html>
